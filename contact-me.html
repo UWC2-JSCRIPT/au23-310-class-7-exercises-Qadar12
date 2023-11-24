@@ -2,9 +2,66 @@
 <html>
   <head>
     <title>Contact Me</title>
+    <link rel="stylesheet" href="contact-me.css" />
+    <script src="contact-me.js"></script>
   </head>
-
   <body>
-    <!-- TODO -->
+    <form id="contactForm" action="contact-form" method="post">
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <!-- Added required and min length validation -->
+          <input type="text" id="name" name="name" required minlength="3" />
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <!-- Added required and pattern for email validation -->
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="\w+@\w+\.\w+"
+          />
+        </li>
+        <li>
+          <label for="reason">Pick a reason</label>
+          <!-- drop down options -->
+          <select id="reason" name="reason" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="job opportunity">Job opportunity</option>
+            <option value="talk code">Talk code</option>
+          </select>
+          <!-- select job and show title and company website -->
+          <div id="jobInfo" class="hidden">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle" />
+
+            <label for="companyWebsite">Company Website</label>
+            <input type="url" id="companyWebsite" name="companyWebsite" />
+          </div>
+          <!-- select talk and show code coding language -->
+          <div id="talkInfo" class="hidden">
+            <label for="codingLanguage">Coding language</label>
+            <input type="text" id="codingLanguage" name="codingLanguage" />
+          </div>
+        </li>
+        <li>
+          <label for="message">Message</label>
+          <!-- Added required and min length validation -->
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            required
+            minlength="10"
+          ></textarea>
+        </li>
+        <li>
+          <input type="submit" id="submit" value="Submit" />
+        </li>
+      </ul>
+    </form>
   </body>
 </html>
