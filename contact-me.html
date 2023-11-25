@@ -46,11 +46,15 @@
               pattern="https?\:\/\/.+\..+/"
             />
           </div>
-          <!-- select talk and show code coding language -->
-          <div id="talkInfo" class="hidden">
-            <label for="codingLanguage">Coding language</label>
-            <input type="text" id="codingLanguage" name="codingLanguage" />
-          </div>
+          <!-- select talk and show code coding language dropdown and validation -->
+
+          <select id="talkInfo" name="talkInfo" class="hidden" required>
+            <option value="" disabled selected>Select One</option>
+            <option value="Javascript">Javascript</option>
+            <option value="CSS">CSS</option>
+            <option value="HTML">HTML</option>
+            <option value="Python">Python</option>
+          </select>
         </li>
         <li>
           <label for="message">Message</label>
