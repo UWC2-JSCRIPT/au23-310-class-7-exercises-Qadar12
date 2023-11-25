@@ -32,13 +32,19 @@
             <option value="job opportunity">Job opportunity</option>
             <option value="talk code">Talk code</option>
           </select>
-          <!-- select job and show title and company website -->
+          <!-- select job, show title and company website. Validation required jobtitle and pattern for website  -->
           <div id="jobInfo" class="hidden">
             <label for="jobTitle">Job Title</label>
-            <input type="text" id="jobTitle" name="jobTitle" />
+            <input type="text" id="jobTitle" name="jobTitle" required />
 
             <label for="companyWebsite">Company Website</label>
-            <input type="url" id="companyWebsite" name="companyWebsite" />
+            <input
+              type="url"
+              id="companyWebsite"
+              name="companyWebsite"
+              required
+              pattern="https?\:\/\/.+\..+/"
+            />
           </div>
           <!-- select talk and show code coding language -->
           <div id="talkInfo" class="hidden">
